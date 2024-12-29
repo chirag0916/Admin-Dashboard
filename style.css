@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+display: grid;
+grid-template-columns: 250px 4fr;
+grid-template-rows: 75px 90px 3fr;
+
+grid-template-areas: "sidebar header" 
+"sidebar nav" "sidebar article";
+
+height: 100vh;
+
+}
+
+.sidebar div {
+  padding: 15px;
+  font-size: 16px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: white;
+}
+
+.sidebar img,
+.header img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.dashboard{
+  display: flex;
+  align-items: center; 
+  gap: 5px;
+}
+
+.dashboard img {
+  display: block; 
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-area: header;
+}
+
+.search{
+  padding-top: 10px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  
+ }
+
+ .search-input {
+  border-radius: 50px;
+  width: 420px;
+  height: 20px;
+  border: 1px solid #ccc;
+  background-color: rgb(239, 251, 255);
+ }
+
+ .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+ }
+
+ .menu div {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  line-height: 10px;
+ }
+
+ .name {
+  font-size: 18px;
+  font-weight: bold;
+ }
+
+.menu ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sidebar {
+  background-color: rgb(85, 182, 214);
+  grid-area: sidebar;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-area: nav;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
+
+.nav ul {
+display: flex;
+justify-content: space-around;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+
+.profile-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: auto;
+}
+
+.action-btn {
+  background-color: rgb(85, 182, 214); 
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 15px 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.greeting > .mainname {
+font-size: 27px;
+}
+
+.greeting {
+  padding-left: 20px;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 15px;
+  background-color: rgb(235, 250, 255);
+  grid-area: article;
+  padding-top: 10px;
+  grid-template-areas:"article-title info" "projects info"
+  "projects info2";
+}
+
+.article-title {
+grid-area: article-title;
+font-size: 20px;
+font-weight: bold;
+padding-left: 10px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  grid-area: projects;
+  padding-left: 10px;
+}
+
+.side-info {
+  grid-area: info;
+}
+
+.side-info-2 {
+  grid-area: info2;
+}
+
+.card {
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 16px;
+  border-left: 5px solid orange;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  
+}
+
+.side-card,
+.side-card-2 {
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 16px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  margin-right: 10px;
+}
+
+.side-card {
+  margin-top: 25px;
+}
+
+.card .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.side-card .side-title,
+.side-card-2 .side-title{
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.side-card > div {
+  border-bottom: 1px solid #eee;
+}
+
+.side-card > div:last-child {
+  border-bottom: none;
+}
+
+.side-card > div:nth-child(2),
+.side-card > div:nth-child(3) {
+  padding-top: 16px;
+  padding-left: 10px;
+}
+
+
+.side-card > div:nth-child(1) {
+  padding-left: 10px;
+}
+
+.side-card p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.side-info .title,
+.side-info-2 .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  
+}
+
+.trending {
+display: flex;
+align-items: center;
+}
+
+.trending:not(:last-child) {
+  padding-bottom: 15px;
+}
+
+.trending img {
+ padding-right: 20px; 
+}
+
+.greeting-trending p {
+  font-size: 14px;
+}
+
+.greeting-trending > .mainname-trending {
+  font-size: 12px;
+  color: #666;
+  }
